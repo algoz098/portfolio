@@ -1,55 +1,86 @@
 <template>
-  <div>
-    <nuxt />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-2 pl-0 ">
+      <div class="d-flex flex-column justify-content-between sticky-top">
+        <div class="avatar">
+          <b-img src="/img/avatar.png" />
+        </div>
+
+        <b-list-group>
+          <b-list-group-item to="/">
+            {{$t('about')}}
+          </b-list-group-item>
+          
+          <b-list-group-item to="/work">
+            {{$t('work')}}
+          </b-list-group-item>
+          
+          <b-list-group-item to="/labs">
+            {{$t('labs')}}
+          </b-list-group-item>
+          
+          <b-list-group-item to="/contact">
+            {{$t('contact')}}
+          </b-list-group-item>
+        </b-list-group>
+
+        <div  class="social text-center">
+          <a href="https://github.com/algoz098" target="_blank">
+            <b-img src="/img/social.png"  />
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-xl-9">
+      <nuxt />
+    </div>
   </div>
+</div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<style scoped>
+.social{
+  margin-bottom: 60px;  
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+.flex-column{
+  width: 100%;
+  height: 100vh;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.list-group-item:hover{
+  background-color: rgba(255, 255, 255, 0.031);
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.list-group-item{
+  font-family: ProximaNovaLight;
+  background-color:transparent;
+  border: none;
+  color: white;
+  padding-left: 77px;
+  border-radius: 0px;
+  font-size: 35px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.list-group-item.active{
+  color:#744bff;
+  border-left: 10px solid #744bff;
+  padding-left: 67px;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.avatar{
+  margin-top: 124px;
+  margin-left: 69px;
+  margin-right: 69px;
+  margin-bottom: 54px;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.container-fluid{
+    background-size: 100% 100%;
+    background-image: url(/img/bg.jpg);
+    background-attachment: fixed;
 }
 </style>

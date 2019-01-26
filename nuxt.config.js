@@ -1,4 +1,6 @@
 const pkg = require('./package')
+const localePtBr = require('./locales/pt-br.json')
+const localeEn = require('./locales/en.json')
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
@@ -34,6 +36,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/static/css/fonts.css'
   ],
 
   /*
@@ -50,7 +53,20 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa'
+    
+    '@nuxtjs/pwa',
+
+    ['nuxt-i18n', {
+      locales: ['en', 'pt-br'],
+      defaultLocale: 'en',
+      vueI18n: {
+        fallbackLocale: 'en',
+        messages: {
+          en: localeEn,
+          'pt-br': localePtBr,
+        }
+      }
+    }],
   ],
   /*
   ** Axios module configuration
