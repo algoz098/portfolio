@@ -5,7 +5,7 @@
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
     <b-navbar-brand  :to="'/'">
-      <b-img-lazy src="/img/avatar.png" height="30"/>
+      <b-img-lazy :src="`${env()}/img/avatar.png`" height="30"/>
     </b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
@@ -101,6 +101,21 @@
   </div>
 </div>
 </template>
+
+<script>
+export default {
+  methods:{
+    env(){
+      if (process.env.DEPLOY_ENV=='GH_PAGES') {
+        return "/portfolio"
+      } 
+      
+      return ""
+    }
+  }
+}
+</script>
+
 
 <style scoped>
 .bg-purple{
