@@ -106,6 +106,7 @@
 export default {
   methods:{
     env(){
+      console.log('aqui', window.location.href.includes('portfolio'))
       if (window.location.href.includes('portfolio')) {
         return "/portfolio"
       } 
