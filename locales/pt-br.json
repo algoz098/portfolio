@@ -1,3 +1,15 @@
 {
-    "welcome": "Bem vindo"
+    "about": "Sobre",
+    "work":"Trabalho",
+    "labs":"Laboratorio",
+    "contact":"Contato",
+    "web developer": "Desenvolvedor web",
+    "about_prefix": "Atualmente desenvolvendo para novas startups e empresas. Tambem desenvolvo em",
+    "php": "PHP",
+    "js": "JS",
+    "and": "e",
+    "hire me": "Contrate",
+    "know more": "Conheça",
+    "previous clients": "Clientes anteriores",
+    "say": "Stay hungry for knowledge."
 }
