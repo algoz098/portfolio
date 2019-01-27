@@ -106,7 +106,7 @@
 export default {
   methods:{
     env(){
-      if (process.env.DEPLOY_ENV=='GH_PAGES') {
+      if (window.location.href.includes('portfolio')) {
         return "/portfolio"
       } 
       
