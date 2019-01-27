@@ -5,7 +5,7 @@
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
     <b-navbar-brand  :to="'/'">
-      <b-img-lazy :src="`/img/avatar.png`" height="30"/>
+      <b-img-lazy :src="`${env()}img/avatar.png`" height="30"/>
     </b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
@@ -47,7 +47,8 @@
     </b-collapse>
   </b-navbar>
 
-  <div class="container-fluid">
+    
+  <div class="container-fluid" :style="`background-image: url(${env()}img/bg.jpg);`">
     <div class="row">
       <div class="d-none d-xl-block col-xl-2 pl-0 ">
         <div class="d-flex flex-column justify-content-between sticky-top">
@@ -88,7 +89,7 @@
             </div>
 
             <a href="https://github.com/algoz098" target="_blank">
-              <b-img src="/img/social.png"  />
+              <b-img :src="`${env()}img/social.png`"  />
             </a>
           </div>
         </div>
@@ -101,21 +102,6 @@
   </div>
 </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    env(){
-      if(window.location.href.includes('/portfolio/')){
-        return ''
-      }
-
-      return '/'
-    }
-  }
-}
-</script>
-
 
 <style scoped>
 .bg-purple{
@@ -170,7 +156,6 @@ export default {
 
 .container-fluid{
     background-size: 100% 100%;
-    background-image: url(/img/bg.jpg);
     background-attachment: fixed;
 }
 </style>

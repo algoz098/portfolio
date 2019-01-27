@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container" :style="`background-image: url(${env()}img/bg_avatar.png);`">
     <h1>
       <span class="border-primary">
         {{$t('about')}}
@@ -96,7 +96,6 @@ export default {
   background-position-y: center;
   background-position-x: calc(100% - 300px);
   background-repeat: no-repeat;
-  background-image: url(//img/bg_avatar.png);
   background-attachment: fixed;
 }
 .say{

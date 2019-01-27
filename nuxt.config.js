@@ -42,6 +42,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/i18n.js',
+    '~/plugins/mixin.js',
   ],
   /*
   ** Nuxt.js modules
