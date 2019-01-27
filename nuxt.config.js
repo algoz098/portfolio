@@ -3,9 +3,6 @@ const pkg = require('./package')
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/portfolio/'
-  },
-  build: {
-    publicPath: '/portfolio/'
   }
 } : {}
 
@@ -67,12 +64,12 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
+  // build: {
+  //   /*
+  //   ** You can extend webpack config here
+  //   */
+  //   extend(config, ctx) {
       
-    }
-  }
+  //   }
+  // }
 }

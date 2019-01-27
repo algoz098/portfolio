@@ -52,7 +52,7 @@
       <div class="d-none d-xl-block col-xl-2 pl-0 ">
         <div class="d-flex flex-column justify-content-between sticky-top">
           <div class="avatar">
-            <b-img src="/img/avatar.png" />
+            <img :src="`${env()}/img/avatar.png`" />
           </div>
 
           <b-list-group>
@@ -101,6 +101,21 @@
   </div>
 </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    env(){
+      if(window.location.href.includes('/portfolio/')){
+        return '/portifolio'
+      }
+
+      return ''
+    }
+  }
+}
+</script>
+
 
 <style scoped>
 .bg-purple{
