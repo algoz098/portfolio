@@ -96,7 +96,7 @@ export default {
   background-position-y: center;
   background-position-x: calc(100% - 300px);
   background-repeat: no-repeat;
-  background-image: url(/img/bg_avatar.png);
+  background-image: url(//img/bg_avatar.png);
   background-attachment: fixed;
 }
 .say{

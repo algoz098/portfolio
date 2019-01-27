@@ -5,7 +5,7 @@
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
     <b-navbar-brand  :to="'/'">
-      <b-img-lazy :src="`${env()}/img/avatar.png`" height="30"/>
+      <b-img-lazy :src="`/img/avatar.png`" height="30"/>
     </b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
@@ -101,22 +101,6 @@
   </div>
 </div>
 </template>
-
-<script>
-export default {
-  methods:{
-    env(){
-      console.log('aqui', window.location.href.includes('portfolio'))
-      if (window.location.href.includes('portfolio')) {
-        return "/portfolio"
-      } 
-      
-      return ""
-    }
-  }
-}
-</script>
-
 
 <style scoped>
 .bg-purple{
