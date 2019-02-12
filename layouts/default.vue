@@ -14,7 +14,7 @@
           {{$t('about')}}
         </b-nav-item>
 
-        <b-nav-item href="#">
+        <b-nav-item :to="`/${$store.state.locale}/work`">
           {{$t('work')}}
         </b-nav-item>
 
@@ -57,11 +57,11 @@
           </div>
 
           <b-list-group>
-            <b-list-group-item :to="'/'">
+            <b-list-group-item :to="'/'" exact>
               {{$t('about')}}
             </b-list-group-item>
             
-            <b-list-group-item to="/work">
+            <b-list-group-item :to="`/${$store.state.locale}/work`">
               {{$t('work')}}
             </b-list-group-item>
             
@@ -69,7 +69,7 @@
               {{$t('labs')}}
             </b-list-group-item>
             
-            <b-list-group-item to="/contact">
+            <b-list-group-item href="https://api.whatsapp.com/send?phone=5516996160622" target="_blank">
               {{$t('contact')}}
             </b-list-group-item>
           </b-list-group>
@@ -77,13 +77,13 @@
           <div  class="social text-center">
             <div class="d-inline-block text-light"
               v-b-tooltip="'Change language'"
-              @click="$i18n.locale = 'pt-br'"
+              @click="$i18n.locale = 'pt-br';$store.commit('SET_LANG', 'pt-br')"
             >
               pt-BR
             </div>
             <div class="d-inline-block text-light"
               v-b-tooltip="'Change language'"
-              @click="$i18n.locale = 'en'"
+              @click="$i18n.locale = 'en'; $store.commit('SET_LANG', 'en')"
             >
               EN
             </div>
