@@ -39,6 +39,12 @@ export default {
     return {
       works:[
         {
+          img: `${this.env()}img/gas-trac.png`,
+          name: 'Gas Track NS-Vue',
+          description: `A tracking app for gas spend made in Nativescript-vue`,
+          link: `https://github.com/algoz098/gas-track`
+        },
+        {
           img: `${this.env()}img/turing-app.png`,
           name: 'Turing APP',
           description: `A example beer project in VueJS`,
