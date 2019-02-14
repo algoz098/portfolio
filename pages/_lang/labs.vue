@@ -39,6 +39,12 @@ export default {
     return {
       works:[
         {
+          img: `${this.env()}img/gas-track-quasar.png`,
+          name: 'Gas Track Quasar',
+          description: `A tracking app for gas spend made in QuasarJS`,
+          link: `https://github.com/algoz098/gas-track-quasar`
+        },
+        {
           img: `${this.env()}img/gas-trac.png`,
           name: 'Gas Track NS-Vue',
           description: `A tracking app for gas spend made in Nativescript-vue`,
